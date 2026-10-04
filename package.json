@@ -1,0 +1,23 @@
+{
+  "name": "ihex-sparse-map",
+  "version": "1.0.0",
+  "description": "离线 Intel HEX 固件记录解析与稀疏地址映射核验后端（API + CLI）",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "bin": {
+    "ihex": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test --disable-warning=ExperimentalWarning \"dist/test/**/*.test.js\"",
+    "start": "node --disable-warning=ExperimentalWarning dist/server/index.js",
+    "demo": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/demo.ps1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}
